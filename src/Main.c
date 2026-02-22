@@ -20,12 +20,12 @@ void Resize(AlxWindow* w){
 	WRPool_Resize(&wrp,w->Width,w->Height);
 }
 void Setup(AlxWindow* w){
-	wrp = WRPool_New(w->Width,w->Height,0.9f);
+	wrp = WRPool_New(w->Width,w->Height,0.99f);
 	Resize(w);
 }
 void Update(AlxWindow* w){
 	if(Stroke(ALX_MOUSE_L).DOWN){
-		WRPool_Interact(&wrp,w->MouseX,w->MouseY,100.0f);
+		WRPool_Interact(&wrp,w->MouseX,w->MouseY,500.0f);
 	}
 
 	Clear(BLACK);
